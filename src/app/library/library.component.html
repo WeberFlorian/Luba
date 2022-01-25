@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>LUBA</h1>
+  <div>Library</div>
+  <div class="content">
+    <li *ngFor="let hero of HEROES">
+      {{ hero }}
+    </li>
+  </div>
+
+  <div *ngIf="isAddBookModalOpen">
+    <app-add-book (closeModalEvent)="openAddBookModal()"></app-add-book>
+  </div>
+
+  <a class="button" (click)="openAddBookModal()">Add a new book</a>
+  <a class="button" routerLink="/">Back to Dashboard</a>
+</div>
